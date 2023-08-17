@@ -1,0 +1,69 @@
+import cv2
+import os
+import glob
+
+#ファイルを置いているディレクトリのパス
+f = 'c:\\Users\\minad\OneDrive\\Desktop\\New folder'
+
+#上フリップ
+def image_udflip( src):
+    img_flip_ud = cv2.flip(src, 0)
+    return img_flip_ud
+
+#左右フリップ
+def image_lrflip( src):
+    img_flip_lr = cv2.flip(src, 1)
+    return img_flip_lr
+
+#上下左右フリップ
+def image_udlr( src):
+    img_flip_lrud = cv2.flip(src, -1)
+    return img_flip_lrud
+
+#平滑化
+def image_blur( src):
+    img_blur = cv2.blur(src, (3, 3))
+    return img_blur
+
+#画像リサイズ
+def image_resize( src, width, height):
+    affine_trans = cv2.resize( src, (width, height))
+    return affine_trans
+"""
+test = Image.open("C:/Users/yuki.ando/data/playing_card/system4-4-1.png")
+test.show()    #表示用
+"""
+"""
+test = cv2.imread("C:/Users/yuki.ando/data/playing_card/system4-4-1.png")
+test = skew(test)
+cv2.imwrite(os.path.join(sf, 'test.jpeg'), test)#os.path.join(dirname, image_name), save_image)
+"""
+
+for file_dir in os.listdir(f):
+    cnt = 0
+    sf_dir = f+'/'+file_dir#画像保存先
+    print(sf_dir)
+    image_path = glob.glob(sf_dir + "/*")#各画像取得
+    print(image_path)
+    #for j, tの部分は基本変えない
+    for j, t in enumerate(image_path):
+        cnt += 1
+        print("t", t)
+        orig_image = cv2.imread(t)
+        copy_image = orig_image.copy()
+        reimage = image_resize( copy_image, 32, 32)#255x255
+        cv2.imwrite(os.path.join(sf_dir, f'orig_{cnt}.jpg'), reimage)
+        fllr_image = image_lrflip(reimage)
+        flud_image = image_udflip(reimage)
+        fllrud_image = image_udlr(reimage)
+        cv2.imwrite(os.path.join(sf_dir, f'lrflip_{cnt}.jpg'), fllr_image)
+        cv2.imwrite(os.path.join(sf_dir, f'udflip_{cnt}.jpg'), flud_image)
+        cv2.imwrite(os.path.join(sf_dir, f'lrudflip_{cnt}.jpg'), fllrud_image)
+        bllr_image = image_blur(fllr_image)
+        blud_image = image_blur(flud_image)
+        bllrud_image = image_blur(fllrud_image)
+        cv2.imwrite(os.path.join(sf_dir, f'lrblur_{cnt}.jpg'), bllr_image)
+        cv2.imwrite(os.path.join(sf_dir, f'udblur_{cnt}.jpg'), blud_image)
+        cv2.imwrite(os.path.join(sf_dir, f'lrudblur_{cnt}.jpg'), bllrud_image)
+        bl_image = image_blur(reimage)
+        cv2.imwrite(os.path.join(sf_dir, f'origblur_{cnt}.jpg'), bl_image)

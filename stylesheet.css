@@ -1,0 +1,322 @@
+/* Styles for the header */
+
+.logo img {
+	width: 200px;
+	height: 200px;
+	margin-right: 10px;
+}
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #f8e7ab;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+  margin: 0 auto;
+}
+/* check if this is needed */
+header .logo {
+	display: flex;
+	align-items: center;
+	font-size: 40px;
+	font-weight: bold;
+	color: #333;
+	text-decoration: none;
+}
+header .logo div:first-child {
+	font-size: 16px;
+	color: #333;
+}
+header .logo div:last-child {
+	font-size: 24px;
+	color: #333;
+}
+/*another logo*/
+header .logo img {
+	/*margin-left: 10px;*/
+	height: 100px;
+}
+header nav {
+	display: flex;
+	align-items: center;
+}
+header nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	/*display: flex;*/
+}
+
+header nav li {
+	margin-right: 20px;
+}
+header nav a {
+	font-size: 18px;
+	color: #333;
+	text-decoration: none;
+	/*padding: 10px;*/
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+}
+header nav a:hover {
+	background-color: #ddd;
+}
+/* Styles for the main content */
+
+/*changes the footer*/ 
+main {
+	background-color: #f6f6f6;
+	padding: 50px;
+}
+h1 {
+	font-size: 48px;
+	color: #333;
+	margin-bottom: 20px;
+}
+p {
+	font-size: 24px;
+	color: #666;
+	line-height: 1.5;
+}
+/* Styles for the social media icons */
+
+.social-media-icons {
+	display: flex;
+	align-items: center;
+}
+.social-media-icons a {
+	margin-right: 10px;
+	color: #333;
+	font-size: 24px;
+	text-decoration: none;
+}
+.social-media-icons a:hover {
+	color: white;
+  }
+.fa {
+	padding: 20px;
+	font-size: 30px;
+	width: 50px;
+	text-align: center;
+	text-decoration: none;
+}
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0px;
+  	background-color: pink;
+}
+/* Style the navigation menu */
+
+.topnav {
+	overflow: hidden;
+	background-color: #333;
+	position: relative;
+ 	margin: 0 auto;
+}
+/* Hide the links inside the navigation menu (except for logo/home) */
+
+.topnav #myLinks {
+   display: none;
+  flex-direction: column; /* Add this line to align links vertically */
+
+}
+/* Style navigation menu links */
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: inline-block; /* Change display to inline-block */
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+
+  display: inline-block; /* Change display to inline-block */
+  padding: 0px 0px; /* Adjust padding as needed */
+  margin-right: 20px; 
+  margin-left: 0px; /* Add left margin to create space between text and hamburger */
+}
+
+/* Reset default styles */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+/* Global styles */
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f6f6f6;
+	/* background-image: url('support1.jpg');; */
+}
+/* Service section styles */
+div.container {
+  margin: 0 auto;
+}
+
+.contents {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+  align-items: center;
+	flex-wrap: wrap;
+  background-color: red;
+	opacity: 0;
+    animation: fade-in 1s ease-in-out forwards;	
+}
+
+.first {
+	position: relative;
+	margin-top: 94px;
+	visibility: hidden;
+	animation: fade-in 1s ease-in-out forwards;
+}
+/*each picture*/
+img {
+	max-width: 100%;
+	max-height: 100vh; /* Set the image height to fit the viewport height */
+	object-fit: contain; /* Preserve the aspect ratio and fit the image within the container */
+	margin-bottom: 100px;
+    animation: fade-in 1s ease-in-out forwards;
+
+}
+.arrow-caption {
+  position: absolute;
+  bottom: 90px;
+  left: 200px;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+.image-caption {
+  position: absolute;
+  bottom: 50px;
+  left: 950px;
+  color: black;
+  font-size: 34px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.parent {
+	position: relative;
+	top: 0;
+	left: 0;
+}
+.image1 {
+	position: relative;
+	top: 0;
+	left: 0;
+}
+.image2 {
+	/*max-width: 10%;*/
+  	height: 120%;
+	width: 900px;
+	position: absolute;
+	top: 150px;
+	right: 600px;
+}
+
+/* Add a grey background color on mouse-over */
+
+.topnav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+/* Style the active link (or home/logo) */
+
+.active {
+	background-color: black;
+	color: white;
+}
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #9ACD32;
+    color: black; /* Set text color to black */
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer; /* Add cursor style */
+	    font-weight: bold; /* Make the text bold */
+
+  }
+  .yellow-rectangle {
+    background-color: #FFDB58; /* Mustard yellow color */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto; /* Center the rectangle */
+    max-width: 100%; /* Adjust the width as needed */
+    text-align: center;
+  }
+
+  .inner-content {
+    color: white;
+  }
+@media screen and (max-width: 600px) {
+	.topnav.responsive #myLinks {
+	  display: flex;
+	  flex-direction: column;
+	}
+  }
+
+  footer {
+	text-align: center;
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+  }
+  footer h1 {
+	font-size: 24px;
+  }
+  footer p {
+	font-size: 16px;
+  }
+
+  @keyframes fade-in {
+	0% {
+	  opacity: 0;
+	  transform: translateY(20px);
+	}
+	100% {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+
+  .testing {
+	width: 80.2%;
+	min-height: 686px;
+	max-width: 100%;
+	margin-left: auto;
+	background-size: cover;
+	background-position: top center;
+  }
+  
+  @keyframes fade-in {
+	0% {
+	  opacity: 0;
+	  transform: translateY(20px);
+	}
+	100% {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+}
+
+@media screen and (min-width: 0em) and (max-width: 59.3125em) {
+	.contents {
+	  margin-top: 60px;
+	  margin-bottom: 72px;
+	}
+  }
+  

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>NEXT IMPACT</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="category_style.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html">
+        <p>株式会社 <br> NEXT IMPACT </p>
+        <img alt="Logo" src="logo.jpg">
+      </a>
+      <div class="social-media-icons">
+        <a href="#">
+          <i class="fa fa-facebook-f"></i>
+        </a>
+        <a href="#">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <a href="#">
+          <i class="fa fa-instagram"></i>
+        </a>
+      </div>
+      <!-- Top Navigation Menu -->
+      <div class="topnav">
+        <a class="active" href="#home">メニュー</a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+          <a href="#news">ホーム</a>
+          <a href="#contact">私たちについて</a>
+          <a href="#about">サービス</a>
+          <a href="#about">会社概要</a>
+          <a href="#about">お問い合わせ</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a class="icon" href="javascript:void(0);" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <!-- <nav> -->
+      <!-- <ul><li><a href="#">ホーム</a></li><li><a href="#">私たちについて</a></li><li><a href="#">サービス</a></li><li><a href="#">会社概要</a></li><li><a href="#">お問い合わせ</a></li></ul> -->
+      <!-- </nav> -->
+      <div class="menu-bar" onclick="toggleMenu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <!-- Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon -->
+      
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myLinks");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+            x.style.flexDirection = "column"; 
+          }
+          
+        }
+      </script>
+        </header>
+  <main>
+    <section class="categories">
+      <h2>高齢者の方や介護をする方に向けた支援金</h2>
+      <ul>
+        <li>
+          <a href="student.html">
+            <div class="category-box">
+              <h3>介護休業給付金</h3>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="parent.html">
+            <div class="category-box">
+              <h3>高齢者雇用継続給付金</h3>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="single-parent.html">
+            <div class="category-box">
+              <h3>住まい給付金</h3>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="senior.html">
+            <div class="category-box">
+              <h3>住宅省エネリノベーション促進事業費補助金</h3>
+            </div>
+          </a>
+        </li>
+        <li>
+            <a href="senior.html">
+              <div class="category-box">
+                <h3>住宅改修</h3>
+              </div>
+            </a>
+          </li>
+        <!-- Add more categories here -->
+        <li>
+            <a href="senior.html">
+              <div class="category-box">
+                <h3>特別支給の老齢生年金</h3>
+              </div>
+            </a>
+          </li>
+      </ul>
+      <h2>子育てや過程を支える方に向けた支援金</h2>
+      <ul>
+        <li>
+          <a href="student.html">
+            <div class="category-box">
+              <h3>出産育児一時金</h3>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="parent.html">
+            <div class="category-box">
+              <h3>住まい給付金</h3>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="single-parent.html">
+            <div class="category-box">
+              <h3>住宅ローン減税制度</h3>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <h2>申請期限が迫る特別給付金</h2>
+      <ul>
+        <li>
+          <a href="student.html">
+            <div class="category-box">
+              <h3>新型コロナウイルス感染症特別貸付</h3>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="parent.html">
+            <div class="category-box">
+              <h3>電気・ガス・電話料金やNHK受信料等の支払い</h3>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="bgata_q1.html">
+            <div class="category-box">
+              <h3>B型肝炎給付金</h3>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

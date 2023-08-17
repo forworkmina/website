@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>B型肝炎給付金</title>
+    <meta charset="UTF-8">
+    <title>NEXT IMPACT</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="category_style.css">
+  <body>
+    <header>
+      <a class="logo" href="index.html">
+          <p>株式会社 <br> NEXT IMPACT </p>
+          <img alt="Logo" src="logo.jpg">
+        </a>
+        <div class="social-media-icons">
+          <a href="#">
+            <i class="fa fa-facebook-f"></i>
+          </a>
+          <a href="#">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i class="fa fa-instagram"></i>
+          </a>
+        </div>
+        <!-- Top Navigation Menu -->
+        <div class="topnav">
+          <a class="active" href="#home">メニュー</a>
+          <!-- Navigation links (hidden by default) -->
+          <div id="myLinks">
+            <a href="index.html">ホーム</a>
+            <a href="#contact">私たちについて</a>
+            <a href="#about">サービス</a>
+            <a href="#about">会社概要</a>
+            <a href="#about">お問い合わせ</a>
+          </div>
+          <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+          <a class="icon" href="javascript:void(0);" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+        <!-- <nav> -->
+        <!-- <ul><li><a href="#">ホーム</a></li><li><a href="#">私たちについて</a></li><li><a href="#">サービス</a></li><li><a href="#">会社概要</a></li><li><a href="#">お問い合わせ</a></li></ul> -->
+        <!-- </nav> -->
+        <div class="menu-bar" onclick="toggleMenu()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <!-- Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon -->
+        
+        <script>
+          function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+              x.style.display = "none";
+            } else {
+              x.style.display = "block";
+              x.style.flexDirection = "column"; 
+            }
+            
+          }
+        </script>
+          </header>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      max-width: 550px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    
+    h3 {
+      text-align: center;
+      margin-top: 0;
+    }
+    
+    .question {
+      margin-bottom: 20px;
+    }
+    
+    .answer-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4286f4;
+      color: #fff;
+      cursor: pointer;
+    }
+    
+    .answer-btn:hover {
+      background-color: #2c67b8;
+    }
+    
+    .result {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3>- B型肝炎でつらい想いをされているあなたへ -</h3>
+    
+    <div class="question">
+      <p>Q1: B型肝炎ウイルスに現在感染している。または感染していたことがありますか。</p>
+      <button class="answer-btn" onclick="answerQuestion(true)">Yes</button>
+      <button class="answer-btn" onclick="answerQuestion(false)">No</button>
+    </div>
+    
+    <div class="question">
+      <p>Q2: 生年月日が昭和16年7月2日～昭和63年1月27日までの間ですか。</p>
+      <button class="answer-btn" onclick="answerQuestion(true)">Yes</button>
+      <button class="answer-btn" onclick="answerQuestion(false)">No</button>
+    </div>
+    
+    <div class="question">
+      <p>Q3: 幼少期に集団予防接種をされていましたか。</p>
+      <button class="answer-btn" onclick="answerQuestion(true)">Yes</button>
+      <button class="answer-btn" onclick="answerQuestion(false)">No</button>
+    </div>
+    
+    <div class="result" id="result"></div>
+  </div>
+  
+  <script>
+    var answers = [];
+    
+    function answerQuestion(answer) {
+      answers.push(answer);
+      
+      if (answers.length === 3) {
+        var result = document.getElementById('result');
+        var personalityType = calculatePersonalityType();
+        result.innerHTML =  personalityType;
+      }
+    }
+    
+    function calculatePersonalityType() {
+      var q1 = answers[0];
+      var q2 = answers[1];
+      var q3 = answers[2];
+      
+      if ((q1 && q2 && q3) || (q1 && q2 && !q3)) {
+        return '50万円から3600万円の給付が国から支払われる可能性が高いです。';
+      } else {
+        return '給付金の対象になるかどうか、詳しく調査する必要があります。<br> まずはご相談ください。';
+      }
+    }
+  </script>
+</body>
+</html>
