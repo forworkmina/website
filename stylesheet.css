@@ -1,18 +1,35 @@
 /* Styles for the header */
 
 .logo img {
-	width: 200px;
-	height: 200px;
-	margin-right: 10px;
+	width: auto;
+	height: 50px;
+	/*margin-right: 10px;*/
 }
-header {
+/*header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	background-color: #f8e7ab;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	padding: 20px;
+	padding: 10 20px;
   margin: 0 auto;
+}*/
+
+
+header {
+    display: flex;
+    flex-direction: row; /* Change to row for horizontal layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Distribute space between elements */
+    background-color: transparent;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0; /* Align to the left side */
+    right: 0; /* Align to the right side */
+    z-index: 1000; /* Ensure the header is above other content */
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove any default padding */
 }
 /* check if this is needed */
 header .logo {
@@ -23,6 +40,11 @@ header .logo {
 	color: #333;
 	text-decoration: none;
 }
+
+.logo p, .topnav a {
+	color: white;
+  }
+
 header .logo div:first-child {
 	font-size: 16px;
 	color: #333;
@@ -82,7 +104,10 @@ p {
 
 .social-media-icons {
 	display: flex;
-	align-items: center;
+	align-items: right;
+
+	margin-top: 10px; /* Adjust spacing as needed */
+
 }
 .social-media-icons a {
 	margin-right: 10px;
@@ -108,17 +133,25 @@ p {
 }
 /* Style the navigation menu */
 
-.topnav {
+/*.topnav {
 	overflow: hidden;
 	background-color: #333;
 	position: relative;
  	margin: 0 auto;
-}
+}*/
+.topnav {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1001; /* Above the header */
+	align-self: flex-end;
+  }
 /* Hide the links inside the navigation menu (except for logo/home) */
 
 .topnav #myLinks {
-   display: none;
-  flex-direction: column; /* Add this line to align links vertically */
+	display: flex;  
+	flex-direction: row; /* Add this line to align links vertically */
+	justify-content: flex-end;
 
 }
 /* Style navigation menu links */
@@ -132,14 +165,9 @@ p {
 }
 
 /* Style the hamburger menu */
-.topnav a.icon {
-
-  display: inline-block; /* Change display to inline-block */
-  padding: 0px 0px; /* Adjust padding as needed */
-  margin-right: 20px; 
-  margin-left: 0px; /* Add left margin to create space between text and hamburger */
-}
-
+.topnav .icon {
+	display: none;
+  }
 /* Reset default styles */
 
 * {
@@ -262,6 +290,24 @@ img {
   .inner-content {
     color: white;
   }
+
+  .top-content {
+	border: none;
+	position: relative;
+	height: 100vh;
+	background: url('Presentation1.jpg') no-repeat center center / cover;
+  }
+
+  .overlay-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	text-align: center;
+	z-index: 2;
+  }
+
 @media screen and (max-width: 600px) {
 	.topnav.responsive #myLinks {
 	  display: flex;

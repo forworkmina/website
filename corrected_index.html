@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <link href="corrected_stylesheet.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <title>NEXT IMPACT</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html">
+      <p>株式会社 <br> NEXT IMPACT </p>
+      <img alt="Logo" src="logo.jpg" style="height: 100px;"> <!-- Adjust logo size -->
+    </a>
+    <div class="social-media-icons">
+      <a href="#">
+        <i class="fa fa-facebook-f"></i>
+      </a>
+      <a href="#">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a href="#">
+        <i class="fa fa-instagram"></i>
+      </a>
+    </div>
+    <div class="topnav">
+      <div id="myLinks">
+        <a href="#news">ホーム</a>
+        <a href="#contact">私たちについて</a>
+        <a href="#about">サービス</a>
+        <a href="#about">会社概要</a>
+        <a href="#about">お問い合わせ</a>
+      </div>
+      <a class="icon" href="javascript:void(0);" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <div class="menu-bar" onclick="toggleMenu()">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </header>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+        x.style.flexDirection = "column"; 
+      }
+    }
+  </script>
+  <div class="top-content" style="height: 100vh; background: url('Presentation1.jpg') no-repeat center center / cover;">
+    <div class="overlay-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center;">
+      <h1>二ボンの生活を変える</h1>
+      <p>OUR PHILOSOPHY</p>
+      <p>テクノロジーとマーケティングの力で中小企業の生活性を改善する</p>
+    </div>
+  </div>
+  <contents>
+    
+      <div class="top-content">
+        <!--<img alt="Top Image" class="top-image" src="Presentation1.jpg">-->
+        <div class="overlay-text">
+          <h1>株式会社ネクストインパクト</h1>
+          <p>人々に更なる影響を与え、未来に Commit する会社である</p>
+        </div> 
+      </div>
+      <div class="parent">
+        <img alt="Top Image" class="top-image" src="Presentation2.jpg">
+  
+        <!-- Your other content goes here -->
+      </div>
+      <!-- Mustard yellow rectangle -->
+      <div class="yellow-rectangle">
+        <div class="inner-content">
+          <h1>～支援をもっと身近に～</h1>
+          <p>あなたが気になる支援金を探し、申請対象であるか</p>
+            <a class="cta-button"href="category.html">Check</a>
+        </div>
+      </div>
+  
+    <footer>
+      <!-- Your footer content goes here -->
+    </footer>
+  </body>
+  </html>
+  
+    <!-- Other contents if needed -->
+  </contents>
+  <footer>
+    <!-- Your footer content goes here -->
+  </footer>
+</body>
+</html>

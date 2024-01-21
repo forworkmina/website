@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <title>B型肝炎給付金</title>
+<head>
+    <title>住まい給付金</title>
   <meta charset="UTF-8">
   <title>NEXT IMPACT</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -9,8 +10,8 @@
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="stylesheet" type="text/css" href="category_style.css">
 <body>
-  <header>
-    <a class="logo" href="index.html">
+    <header>
+      <a class="logo" href="index.html">
         <p>株式会社 <br> NEXT IMPACT </p>
         <img alt="Logo" src="logo.jpg">
       </a>
@@ -25,32 +26,24 @@
           <i class="fa fa-instagram"></i>
         </a>
       </div>
-      <!-- Top Navigation Menu -->
       <div class="topnav">
-        <a class="active" href="#home">メニュー</a>
-        <!-- Navigation links (hidden by default) -->
+        <!-- <a class="active" href="#home">メニュー</a> -->
         <div id="myLinks">
-          <a href="index.html">ホーム</a>
+          <a href="#news">ホーム</a>
           <a href="#contact">私たちについて</a>
           <a href="#about">サービス</a>
           <a href="#about">会社概要</a>
           <a href="#about">お問い合わせ</a>
         </div>
-        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
         <a class="icon" href="javascript:void(0);" onclick="myFunction()">
           <i class="fa fa-bars"></i>
         </a>
       </div>
-      <!-- <nav> -->
-      <!-- <ul><li><a href="#">ホーム</a></li><li><a href="#">私たちについて</a></li><li><a href="#">サービス</a></li><li><a href="#">会社概要</a></li><li><a href="#">お問い合わせ</a></li></ul> -->
-      <!-- </nav> -->
       <div class="menu-bar" onclick="toggleMenu()">
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
       </div>
-      <!-- Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon -->
-      
       <script>
         function myFunction() {
           var x = document.getElementById("myLinks");
@@ -60,10 +53,9 @@
             x.style.display = "block";
             x.style.flexDirection = "column"; 
           }
-          
         }
       </script>
-        </header>
+    </header>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -111,15 +103,18 @@
 </head>
 <body>
   <!-- Header and navigation links -->
-  <!-- Add your header content here -->
+  <header>
+    <!-- Add your header content here -->
+  </header>
 
   <div class="container">
-    <h3>- B型肝炎でつらい想いをされているあなたへ -</h3>
+    <h3>- 住まい給付金 -</h3>
     
-    <div class="question">
-      <p>Q2: 生年月日が昭和16年7月2日～昭和63年1月27日までの間ですか。</p>
-      <a class="answer-btn" href="bgata_q3.html?answer=yes">Yes</a>
-      <a class="answer-btn" href="bgata_no.html?answer=no">No</a>
+    <div class="result" id="result">
+      <!-- JavaScript for calculating and displaying the result -->
+      <p>給付金の対象になるかどうか、詳しく調査する必要があります。<br> まずはご相談ください。</p>
+      <a class="answer-btn" href="index.html?answer=no">ホームページに戻る</a>
+
     </div>
   </div>
 </body>
